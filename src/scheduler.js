@@ -21,7 +21,7 @@ function _performValidations(teams, dates) {
   }
 }
 
-function generateSchedule(teams, dates) {
+export default function generateSchedule(teams, dates) {
 
   _performValidations(teams, dates);
 
@@ -81,5 +81,3 @@ function generateSchedule(teams, dates) {
 
   return schedule;
 }
-
-module.exports = generateSchedule;

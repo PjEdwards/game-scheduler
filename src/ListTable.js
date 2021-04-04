@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     width: '100%',
   },
   container: {
-    minHeight: 340,
+    minHeight: 200,
   },
 });
 
