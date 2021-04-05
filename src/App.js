@@ -13,7 +13,6 @@ import Container from '@material-ui/core/Container';
 import ListTable from './ListTable';
 import generateSchedule from './scheduler';
 import ScheduleTable from './ScheduleTable';
-import { Paper } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
