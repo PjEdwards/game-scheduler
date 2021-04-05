@@ -16,7 +16,8 @@
   "scripts": {
     "test": "node scripts/example.js",
     "start": "react-scripts start",
-    "build": "react-scripts build && rm -rf docs && mv build docs",
+    "build": "react-scripts build",
+    "deploy": "rm -rf docs && mv build docs",
     "eject": "react-scripts eject"
   },
   "browserslist": {

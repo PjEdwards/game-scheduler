@@ -14,6 +14,12 @@ const useStyles = makeStyles({
     minWidth: 650,
     minHeight: 200
   },
+  header: {
+    backgroundColor: '#cecece'
+  },
+  subheader: {
+    backgroundColor: '#b9b9ff'
+  }
 });
 
 function createData(schedule) {
@@ -23,8 +29,7 @@ function createData(schedule) {
     data.push({
       name: date,
       gameDate: date,
-      team1: null,
-      team2: null,
+      teams: null,
       field: null,
       time: null
     });
@@ -52,26 +57,33 @@ export default function BasicTable(props) {
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
-          <TableRow>
-            <TableCell>Game Date</TableCell>
-            <TableCell>Team</TableCell>
-            <TableCell>Team</TableCell>
+          <TableRow className={classes.header}>
+            <TableCell>Team 1</TableCell>
+            <TableCell>Team 2</TableCell>
             <TableCell>Field</TableCell>
             <TableCell>Time</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
-                {row.gameDate}
-              </TableCell>
-              <TableCell>{row.team1}</TableCell>
-              <TableCell>{row.team2}</TableCell>
-              <TableCell>{row.field}</TableCell>
-              <TableCell>{row.time}</TableCell>
-            </TableRow>
-          ))}
+          {rows.map((row) => {
+            if (row.gameDate) {
+              return (
+                <TableRow key={row.name} className={classes.subheader}>
+                  <TableCell colSpan={4}>{row.gameDate}</TableCell>
+                </TableRow>
+              )
+            } else {
+              return (
+                <TableRow key={row.name}>
+                  <TableCell>{row.team1}</TableCell>
+                  <TableCell>{row.team2}</TableCell>
+                  <TableCell>{row.field}</TableCell>
+                  <TableCell>{row.time}</TableCell>
+                </TableRow>
+              )
+            }
+
+          })}
         </TableBody>
       </Table>
     </TableContainer>

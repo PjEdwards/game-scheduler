@@ -53,6 +53,10 @@ const DEFAULT_TEAMS = [
   'Totally Tacos',
   'Power Pidgeons',
   'Kickin Kiddos',
+  'Coach Payne',
+  'Dream Team',
+  'SM Storm',
+  'Team Awesome'
 ]
 
 const DEFAULT_DATES = [
@@ -61,6 +65,10 @@ const DEFAULT_DATES = [
   'game-3',
   'game-4',
   'game-5',
+  'May 7',
+  'Groundhog Day',
+  'Tourney A',
+  'Last Game'
 ]
 
 export default function SignUp() {
