@@ -35,7 +35,7 @@ function createData(items) {
   }
 }
 
-export default function StickyHeadTable(props) {
+export default function ListTable(props) {
   const classes = useStyles();
   let { name, rows, handleRemoveItem } = props;
 

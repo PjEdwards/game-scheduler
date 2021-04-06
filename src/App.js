@@ -17,7 +17,7 @@ import ScheduleTable from './ScheduleTable';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    marginTop: theme.spacing(8),
+    marginTop: theme.spacing(5),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -28,21 +28,25 @@ const useStyles = makeStyles((theme) => ({
   },
   form: {
     width: '100%', // Fix IE 11 issue.
-    margin: theme.spacing(3),
   },
   textfield: {
     width: '86%'
   },
   submit: {
-    margin: theme.spacing(0),
-    width: '40%'
+    margin: theme.spacing(0, 1),
+    width: '30%'
   },
-  reset: {
-    margin: theme.spacing(0, 1, 0),
+  download: {
+    margin: theme.spacing(0, 1),
     width: '20%'
   },
+  reset: {
+    margin: theme.spacing(0, 1),
+    width: '20%',
+    backgroundColor: '#f39a9a'
+  },
   example: {
-    margin: theme.spacing(0, 1, 0),
+    margin: theme.spacing(0, 1),
     width: '20%'
   }
 }));
@@ -70,7 +74,7 @@ const DEFAULT_DATES = [
   'Last Game'
 ]
 
-export default function SignUp() {
+export default function App() {
   const classes = useStyles();
 
   const [teams, setTeams] = useState([]);
@@ -138,6 +142,45 @@ export default function SignUp() {
     }
   }
 
+  function toCsv(table) {
+    // Query all rows
+    const rows = table.querySelectorAll('tr');
+
+    return [].slice.call(rows)
+        .map(function(row) {
+            // Query all cells
+            const cells = row.querySelectorAll('th,td');
+            return [].slice.call(cells)
+                .map(function(cell) {
+                    return cell.textContent;
+                })
+                .join(',');
+        })
+        .join('\n');
+  };
+
+  function handleDownload() {
+
+    if (schedule.length === 0) {
+      alert('There is nothing to download yet.');
+      return;
+    }
+
+    const table = document.getElementById('exportMe');
+    const csv = toCsv(table);
+    const link = document.createElement('a');
+    link.setAttribute('href', `data:text/csv;charset=utf-8,${encodeURIComponent(csv)}`);
+    link.setAttribute('download', 'schedule.csv');
+
+    link.style.display = 'none';
+    document.body.appendChild(link);
+
+    link.click();
+
+    document.body.removeChild(link);
+  };
+
+
   return (
     <Container component="main" maxWidth="md">
       <CssBaseline />
@@ -150,18 +193,18 @@ export default function SignUp() {
         </Typography>
         <Typography component="p">
           This tool generates a random collection of matches that ensures that each team plays on every game day, that each team plays every other team, and that each team plays the minimum number of repeat matches.<br /><br />
-          Step 1: Enter all team names<br />
+          Step 1: Enter all team names (there have to be an even number of teams)<br />
           Step 2: Enter all game dates as text<br />
           Step 3: Click the "Generate Schedule" button. The created schedule is shown at the bottom of the page.<br />
-          Step 4: If desired, click the "Generate Schedule" button again to re-generate a different random schedule.
-
+          Step 4: If desired, click the "Generate Schedule" button again to re-generate a different random schedule.<br />
+          Step 5: Click the "Download CSV" button to download the generated schedule as a CSV file
         </Typography>
         <div className={classes.paper}>
-          <Grid container spacing={3}>
+          <Grid container spacing={2}>
           <Grid item xs={12} sm={12} style={{textAlign: "center"}}>
               <Button
                 variant="contained"
-                color="primary"
+                color="secondary"
                 className={classes.submit}
                 onClick={handleGenerateSchedule}
               >
@@ -169,7 +212,14 @@ export default function SignUp() {
               </Button>
               <Button
                 variant="contained"
-                color="secondary"
+                color="primary"
+                className={classes.download}
+                onClick={handleDownload}
+              >
+                Download CSV
+              </Button>
+              <Button
+                variant="contained"
                 className={classes.reset}
                 onClick={handleClearAll}
               >
@@ -183,6 +233,9 @@ export default function SignUp() {
               >
                 Show Example
               </Button>
+            </Grid>
+            <Grid item xs={12} sm={12}>
+              <ScheduleTable schedule={schedule} className={classes.form} />
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -230,8 +283,6 @@ export default function SignUp() {
               <ListTable name="Dates" rows={dates} handleRemoveItem={handleRemoveItem} />
             </Grid>
           </Grid>
-          <br />
-          <ScheduleTable schedule={schedule} className={classes.form} />
         </div>
       </div>
     </Container>

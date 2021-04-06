@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -48,14 +49,15 @@ function createData(schedule) {
   return data;
 }
 
-export default function BasicTable(props) {
+
+export default function ScheduleTable(props) {
   const classes = useStyles();
   const { schedule } = props;
   const rows = createData(schedule);
 
   return (
     <TableContainer component={Paper}>
-      <Table className={classes.table} aria-label="simple table">
+      <Table className={classes.table} aria-label="simple table" id="exportMe">
         <TableHead>
           <TableRow className={classes.header}>
             <TableCell>Team 1</TableCell>
