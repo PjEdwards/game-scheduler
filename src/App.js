@@ -58,19 +58,18 @@ const DEFAULT_TEAMS = [
   'Kickin Kiddos',
   'Coach Payne',
   'Dream Team',
-  'SM Storm',
+  'Mandalorian Pizza',
   'Team Awesome'
 ]
 
 const DEFAULT_DATES = [
   'game-1',
+  'May 7',
   'game-2',
+  'Groundhog Day',
   'game-3',
   'game-4',
   'game-5',
-  'May 7',
-  'Groundhog Day',
-  'Tourney A',
   'Last Game'
 ]
 
@@ -215,6 +214,7 @@ export default function App() {
                 color="primary"
                 className={classes.download}
                 onClick={handleDownload}
+                disabled={schedule.length===0}
               >
                 Download CSV
               </Button>
@@ -280,7 +280,7 @@ export default function App() {
               <IconButton id="addDate" aria-label="add" className={classes.margin} onClick={handleAddItem}>
                 <AddIcon />
               </IconButton>
-              <ListTable name="Dates" rows={dates} handleRemoveItem={handleRemoveItem} />
+              <ListTable name="Games" rows={dates} handleRemoveItem={handleRemoveItem} />
             </Grid>
           </Grid>
         </div>

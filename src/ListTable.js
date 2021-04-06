@@ -12,8 +12,8 @@ import TableRow from '@material-ui/core/TableRow';
 
 
 const columns = [
-  { id: 'name', label: 'Props', minWidth: 190 },
-  { id: 'deleteme', label: 'Remove', minWidth: 80 }
+  { id: 'name', label: 'name', minWidth: 190 },
+  { id: 'deleteme', label: '', minWidth: 80 }
 ];
 
 const useStyles = makeStyles({
@@ -53,7 +53,7 @@ export default function ListTable(props) {
                   align={column.align}
                   style={{ minWidth: column.minWidth }}
                 >
-                  {name}
+                  {props[column.label]}
                 </TableCell>
               ))}
             </TableRow>
