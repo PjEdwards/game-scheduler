@@ -580,7 +580,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/config-default@npm:2.0.0-rc.0":
+"@parcel/config-default@npm:2.0.0-rc.0, @parcel/config-default@npm:next":
   version: 2.0.0-rc.0
   resolution: "@parcel/config-default@npm:2.0.0-rc.0"
   dependencies:
@@ -903,7 +903,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/packager-raw-url@npm:2.0.0-rc.0":
+"@parcel/packager-raw-url@npm:next":
   version: 2.0.0-rc.0
   resolution: "@parcel/packager-raw-url@npm:2.0.0-rc.0"
   dependencies:
@@ -1150,7 +1150,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/transformer-webmanifest@npm:2.0.0-rc.0":
+"@parcel/transformer-webmanifest@npm:next":
   version: 2.0.0-rc.0
   resolution: "@parcel/transformer-webmanifest@npm:2.0.0-rc.0"
   dependencies:
@@ -1231,6 +1231,66 @@ __metadata:
   checksum: 3f78479dfc3dced2fc4028ae1405376a119768632821a0982b3b46e92baea6f26ed4a8ce17b75a3fb66f66a4a810d386f0becd01b8c55e519856de845ee2a147
   languageName: node
   linkType: hard
+
+"@soccer/formatters@*, @soccer/formatters@workspace:packages/formatters":
+  version: 0.0.0-use.local
+  resolution: "@soccer/formatters@workspace:packages/formatters"
+  languageName: unknown
+  linkType: soft
+
+"@soccer/game-scheduler@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@soccer/game-scheduler@workspace:."
+  dependencies:
+    "@parcel/config-default": next
+    "@parcel/packager-raw-url": next
+    "@parcel/transformer-webmanifest": next
+    http-server: ^13.0.2
+    parcel: next
+  languageName: unknown
+  linkType: soft
+
+"@soccer/scheduler@workspace:apps/scheduler":
+  version: 0.0.0-use.local
+  resolution: "@soccer/scheduler@workspace:apps/scheduler"
+  dependencies:
+    "@material-ui/core": ^4.11.3
+    "@material-ui/icons": ^4.11.2
+    "@soccer/tables": "*"
+    clsx: ^1.0.4
+    lodash: ^4.17.21
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
+"@soccer/simple-scheduler@workspace:apps/simple-scheduler":
+  version: 0.0.0-use.local
+  resolution: "@soccer/simple-scheduler@workspace:apps/simple-scheduler"
+  dependencies:
+    "@material-ui/core": ^4.11.3
+    "@material-ui/icons": ^4.11.2
+    "@soccer/tables": "*"
+    clsx: ^1.0.4
+    lodash: ^4.17.21
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
+"@soccer/tables@*, @soccer/tables@workspace:packages/tables":
+  version: 0.0.0-use.local
+  resolution: "@soccer/tables@workspace:packages/tables"
+  dependencies:
+    "@material-ui/core": ^4.11.3
+    "@material-ui/icons": ^4.11.2
+    "@soccer/formatters": "*"
+    clsx: ^1.0.4
+    lodash: ^4.17.21
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
 
 "@swc/helpers@npm:^0.2.11":
   version: 0.2.13
@@ -3422,23 +3482,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"game-scheduler@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "game-scheduler@workspace:."
-  dependencies:
-    "@material-ui/core": ^4.11.3
-    "@material-ui/icons": ^4.11.2
-    "@parcel/packager-raw-url": 2.0.0-rc.0
-    "@parcel/transformer-webmanifest": 2.0.0-rc.0
-    clsx: ^1.0.4
-    http-server: ^13.0.2
-    lodash: ^4.17.21
-    parcel: ^2.0.0-rc.0
-    react: ^17.0.2
-    react-dom: ^17.0.2
-  languageName: unknown
-  linkType: soft
-
 "gauge@npm:~2.7.3":
   version: 2.7.4
   resolution: "gauge@npm:2.7.4"
@@ -5601,7 +5644,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"parcel@npm:^2.0.0-rc.0":
+"parcel@npm:next":
   version: 2.0.0-rc.0
   resolution: "parcel@npm:2.0.0-rc.0"
   dependencies:

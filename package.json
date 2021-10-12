@@ -1,21 +1,14 @@
 {
-  "name": "game-scheduler",
+  "name": "@soccer/game-scheduler",
   "version": "1.0.0",
   "author": "Paul Edwards",
   "homepage": "https://pjedwards.github.io/game-scheduler/",
-  "source": "public/index.html",
-  "dependencies": {
-    "@material-ui/core": "^4.11.3",
-    "@material-ui/icons": "^4.11.2",
-    "clsx": "^1.0.4",
-    "lodash": "^4.17.21",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
   "scripts": {
     "test": "node scripts/example.js",
-    "start": "parcel",
-    "build": "parcel build",
+    "start-scheduler": "parcel apps/scheduler/public/index.html",
+    "start-simple-scheduler": "parcel apps/simple-scheduler/public/index.html --open",
+    "build-scheduler": "parcel build apps/scheduler/public/index.html",
+    "build-simple-scheduler": "parcel build apps/simple-scheduler/public/index.html",
     "deploy": "rm -rf docs && mv build docs"
   },
   "browserslist": {
@@ -32,9 +25,14 @@
     ]
   },
   "devDependencies": {
-    "@parcel/packager-raw-url": "2.0.0-rc.0",
-    "@parcel/transformer-webmanifest": "2.0.0-rc.0",
+    "@parcel/config-default": "next",
+    "@parcel/packager-raw-url": "next",
+    "@parcel/transformer-webmanifest": "next",
     "http-server": "^13.0.2",
-    "parcel": "^2.0.0-rc.0"
-  }
+    "parcel": "next"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ]
 }
