@@ -5,10 +5,10 @@
   "homepage": "https://pjedwards.github.io/game-scheduler/",
   "scripts": {
     "test": "node scripts/example.js",
-    "start-scheduler": "parcel apps/scheduler/public/index.html",
+    "start-scheduler": "parcel apps/scheduler/public/index.html --open",
     "start-simple-scheduler": "parcel apps/simple-scheduler/public/index.html --open",
-    "build-scheduler": "parcel build apps/scheduler/public/index.html",
-    "build-simple-scheduler": "parcel build apps/simple-scheduler/public/index.html",
+    "build-scheduler": "parcel build apps/scheduler/public/index.html --dist-dir apps/scheduler/dist",
+    "build-simple-scheduler": "parcel build apps/simple-scheduler/public/index.html --dist-dir apps/simple-scheduler/dist",
     "deploy": "rm -rf docs && mv build docs"
   },
   "browserslist": {
