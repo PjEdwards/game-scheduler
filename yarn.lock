@@ -1259,6 +1259,7 @@ __metadata:
     "@soccer/tables": "*"
     clsx: ^1.0.4
     lodash: ^4.17.21
+    parcel: ^2.0.0-rc.0
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -1273,6 +1274,7 @@ __metadata:
     "@soccer/tables": "*"
     clsx: ^1.0.4
     lodash: ^4.17.21
+    parcel: ^2.0.0-rc.0
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -5644,7 +5646,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"parcel@npm:next":
+"parcel@npm:^2.0.0-rc.0, parcel@npm:next":
   version: 2.0.0-rc.0
   resolution: "parcel@npm:2.0.0-rc.0"
   dependencies:

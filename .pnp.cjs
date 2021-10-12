@@ -1694,6 +1694,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@soccer/tables", "workspace:packages/tables"],
             ["clsx", "npm:1.1.1"],
             ["lodash", "npm:4.17.21"],
+            ["parcel", "npm:2.0.0-rc.0"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:dea6dbeed110040c57eeec3856295ac4897d722db947280734f0b582f52a5745679c378377045842b794f2037d166afd5a6c58d16d9d2641b7929ca897a271ea#npm:17.0.2"]
           ],
@@ -1710,6 +1711,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@soccer/tables", "workspace:packages/tables"],
             ["clsx", "npm:1.1.1"],
             ["lodash", "npm:4.17.21"],
+            ["parcel", "npm:2.0.0-rc.0"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:dea6dbeed110040c57eeec3856295ac4897d722db947280734f0b582f52a5745679c378377045842b794f2037d166afd5a6c58d16d9d2641b7929ca897a271ea#npm:17.0.2"]
           ],
