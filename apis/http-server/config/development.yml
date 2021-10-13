@@ -1,0 +1,2 @@
+oc2_developer_host: "http://devstage.nrel.gov/api"
+LOG_LEVEL: "silly"

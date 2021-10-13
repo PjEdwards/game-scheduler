@@ -1,0 +1,60 @@
+{
+  "name": "@soccer/http-server",
+  "version": "1.0.58",
+  "description": "Simple reusable express server with some GDS harnessing",
+  "main": "dist/index.js",
+  "source": "index.js",
+  "repository": "https://github.nrel.gov/vadr/vadr/code/server/packages/http-server",
+  "author": "NREL GDS",
+  "email": "gds@nrel.gov",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 12"
+  },
+  "scripts": {
+    "dev": "ts-node-dev --respawn --pretty --transpile-only ./index.js",
+    "start": "tsc && node ./index.js"
+  },
+  "dependencies": {
+    "@godaddy/terminus": "^4.1.0",
+    "@soccer/noise": "*",
+    "async": "^2.6.1",
+    "async-transport": "~1.0.5",
+    "await-to-js": "^2.0.1",
+    "axios": "^0.21.1",
+    "body-parser": "^1.18.3",
+    "config": "3.3.6",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.0.0",
+    "express": "~4.16.0",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.3.0",
+    "helmet": "^3.16.0",
+    "http-proxy": "^1.18.0",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
+    "morgan": "~1.9.0",
+    "uuid": "8.3.2"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-rc.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.4"
+  },
+  "publishConfig": {
+    "access": "restricted",
+    "tag": "latest",
+    "registry": "http://gds-dev-nrel-gov.nrelcloud.org/verdaccio"
+  },
+  "eslintConfig": {
+    "env": {
+      "jest": true
+    },
+    "rules": {
+      "no-undef": "error"
+    }
+  }
+}

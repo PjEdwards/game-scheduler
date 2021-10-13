@@ -1,0 +1,6 @@
+{
+  "PORT": 3300,
+  "APP_NAME": "VADR Analyses",
+  "SERVICE_NAME": "vadr-analyses",
+  "PROXY_PATH": "vadr"
+}
