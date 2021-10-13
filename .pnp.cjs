@@ -725,6 +725,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@napi-rs/triples", [
+        ["npm:1.0.3", {
+          "packageLocation": "./.yarn/cache/@napi-rs-triples-npm-1.0.3-b45eecb594-c83a4cc55f.zip/node_modules/@napi-rs/triples/",
+          "packageDependencies": [
+            ["@napi-rs/triples", "npm:1.0.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@node-rs/helper", [
+        ["npm:1.2.1", {
+          "packageLocation": "./.yarn/cache/@node-rs-helper-npm-1.2.1-e25ffdc5ac-c7b96e46df.zip/node_modules/@node-rs/helper/",
+          "packageDependencies": [
+            ["@node-rs/helper", "npm:1.2.1"],
+            ["@napi-rs/triples", "npm:1.0.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@npmcli/fs", [
         ["npm:1.0.0", {
           "packageLocation": "./.yarn/cache/@npmcli-fs-npm-1.0.0-92194475f3-f2b4990107.zip/node_modules/@npmcli/fs/",
@@ -743,6 +762,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@npmcli/move-file", "npm:1.1.2"],
             ["mkdirp", "npm:1.0.4"],
             ["rimraf", "npm:3.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@originjs/vite-plugin-commonjs", [
+        ["npm:1.0.0", {
+          "packageLocation": "./.yarn/cache/@originjs-vite-plugin-commonjs-npm-1.0.0-6bd6b1fd9f-5dba5354d7.zip/node_modules/@originjs/vite-plugin-commonjs/",
+          "packageDependencies": [
+            ["@originjs/vite-plugin-commonjs", "npm:1.0.0"],
+            ["esbuild", "npm:0.12.29"]
           ],
           "linkType": "HARD",
         }]
@@ -786,6 +815,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@soccer/http-server", "workspace:apis/http-server"],
             ["@godaddy/terminus", "npm:4.9.0"],
+            ["@originjs/vite-plugin-commonjs", "npm:1.0.0"],
             ["@soccer/noise", "workspace:packages/noise"],
             ["async", "npm:2.6.3"],
             ["async-transport", "npm:1.0.7"],
@@ -809,7 +839,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node-dev", "virtual:c57ccfc06c3aea768e06251e308f2606ff435ff61d9457971c76ad6458c1eb9af55bcfdcb2c28dfd295432f9b1ad28de159fe54975ce65470a9a39f71eb671e8#npm:1.1.8"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
             ["uuid", "npm:8.3.2"],
-            ["vite", "virtual:4d7d12b0aa0d3ade46e91ab633f16bffc56652399a432a485b9822b71ccdb7d4edee31b1ecc5a3d5d721ecbb952c71d8eefb71066b394c924f7043e31dcc147d#npm:2.6.7"]
+            ["vite", "virtual:4d7d12b0aa0d3ade46e91ab633f16bffc56652399a432a485b9822b71ccdb7d4edee31b1ecc5a3d5d721ecbb952c71d8eefb71066b394c924f7043e31dcc147d#npm:2.6.7"],
+            ["vite-plugin-node", "virtual:c57ccfc06c3aea768e06251e308f2606ff435ff61d9457971c76ad6458c1eb9af55bcfdcb2c28dfd295432f9b1ad28de159fe54975ce65470a9a39f71eb671e8#npm:0.0.14"]
           ],
           "linkType": "SOFT",
         }]
@@ -875,6 +906,136 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:dea6dbeed110040c57eeec3856295ac4897d722db947280734f0b582f52a5745679c378377045842b794f2037d166afd5a6c58d16d9d2641b7929ca897a271ea#npm:17.0.2"]
           ],
           "linkType": "SOFT",
+        }]
+      ]],
+      ["@swc/core", [
+        ["npm:1.2.95", {
+          "packageLocation": "./.yarn/cache/@swc-core-npm-1.2.95-25a000aa18-f6f9666835.zip/node_modules/@swc/core/",
+          "packageDependencies": [
+            ["@swc/core", "npm:1.2.95"],
+            ["@node-rs/helper", "npm:1.2.1"],
+            ["@swc/core-android-arm64", "npm:1.2.95"],
+            ["@swc/core-darwin-arm64", "npm:1.2.95"],
+            ["@swc/core-darwin-x64", "npm:1.2.95"],
+            ["@swc/core-freebsd-x64", "npm:1.2.95"],
+            ["@swc/core-linux-arm-gnueabihf", "npm:1.2.95"],
+            ["@swc/core-linux-arm64-gnu", "npm:1.2.95"],
+            ["@swc/core-linux-arm64-musl", "npm:1.2.95"],
+            ["@swc/core-linux-x64-gnu", "npm:1.2.95"],
+            ["@swc/core-linux-x64-musl", "npm:1.2.95"],
+            ["@swc/core-win32-arm64-msvc", "npm:1.2.95"],
+            ["@swc/core-win32-ia32-msvc", "npm:1.2.95"],
+            ["@swc/core-win32-x64-msvc", "npm:1.2.95"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@swc/core-android-arm64", [
+        ["npm:1.2.95", {
+          "packageLocation": "./.yarn/unplugged/@swc-core-android-arm64-npm-1.2.95-0ba488bc89/node_modules/@swc/core-android-arm64/",
+          "packageDependencies": [
+            ["@swc/core-android-arm64", "npm:1.2.95"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@swc/core-darwin-arm64", [
+        ["npm:1.2.95", {
+          "packageLocation": "./.yarn/unplugged/@swc-core-darwin-arm64-npm-1.2.95-3ad914b825/node_modules/@swc/core-darwin-arm64/",
+          "packageDependencies": [
+            ["@swc/core-darwin-arm64", "npm:1.2.95"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@swc/core-darwin-x64", [
+        ["npm:1.2.95", {
+          "packageLocation": "./.yarn/unplugged/@swc-core-darwin-x64-npm-1.2.95-aedce3fc6c/node_modules/@swc/core-darwin-x64/",
+          "packageDependencies": [
+            ["@swc/core-darwin-x64", "npm:1.2.95"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@swc/core-freebsd-x64", [
+        ["npm:1.2.95", {
+          "packageLocation": "./.yarn/unplugged/@swc-core-freebsd-x64-npm-1.2.95-b44579b065/node_modules/@swc/core-freebsd-x64/",
+          "packageDependencies": [
+            ["@swc/core-freebsd-x64", "npm:1.2.95"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@swc/core-linux-arm-gnueabihf", [
+        ["npm:1.2.95", {
+          "packageLocation": "./.yarn/unplugged/@swc-core-linux-arm-gnueabihf-npm-1.2.95-63e1d38b9e/node_modules/@swc/core-linux-arm-gnueabihf/",
+          "packageDependencies": [
+            ["@swc/core-linux-arm-gnueabihf", "npm:1.2.95"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@swc/core-linux-arm64-gnu", [
+        ["npm:1.2.95", {
+          "packageLocation": "./.yarn/unplugged/@swc-core-linux-arm64-gnu-npm-1.2.95-9a0ede2d0e/node_modules/@swc/core-linux-arm64-gnu/",
+          "packageDependencies": [
+            ["@swc/core-linux-arm64-gnu", "npm:1.2.95"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@swc/core-linux-arm64-musl", [
+        ["npm:1.2.95", {
+          "packageLocation": "./.yarn/unplugged/@swc-core-linux-arm64-musl-npm-1.2.95-47fa9ed20b/node_modules/@swc/core-linux-arm64-musl/",
+          "packageDependencies": [
+            ["@swc/core-linux-arm64-musl", "npm:1.2.95"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@swc/core-linux-x64-gnu", [
+        ["npm:1.2.95", {
+          "packageLocation": "./.yarn/unplugged/@swc-core-linux-x64-gnu-npm-1.2.95-b34ae1d81b/node_modules/@swc/core-linux-x64-gnu/",
+          "packageDependencies": [
+            ["@swc/core-linux-x64-gnu", "npm:1.2.95"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@swc/core-linux-x64-musl", [
+        ["npm:1.2.95", {
+          "packageLocation": "./.yarn/unplugged/@swc-core-linux-x64-musl-npm-1.2.95-37b715ad3c/node_modules/@swc/core-linux-x64-musl/",
+          "packageDependencies": [
+            ["@swc/core-linux-x64-musl", "npm:1.2.95"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@swc/core-win32-arm64-msvc", [
+        ["npm:1.2.95", {
+          "packageLocation": "./.yarn/unplugged/@swc-core-win32-arm64-msvc-npm-1.2.95-26faf3cedd/node_modules/@swc/core-win32-arm64-msvc/",
+          "packageDependencies": [
+            ["@swc/core-win32-arm64-msvc", "npm:1.2.95"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@swc/core-win32-ia32-msvc", [
+        ["npm:1.2.95", {
+          "packageLocation": "./.yarn/unplugged/@swc-core-win32-ia32-msvc-npm-1.2.95-e31827b14c/node_modules/@swc/core-win32-ia32-msvc/",
+          "packageDependencies": [
+            ["@swc/core-win32-ia32-msvc", "npm:1.2.95"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@swc/core-win32-x64-msvc", [
+        ["npm:1.2.95", {
+          "packageLocation": "./.yarn/unplugged/@swc-core-win32-x64-msvc-npm-1.2.95-c91b236774/node_modules/@swc/core-win32-x64-msvc/",
+          "packageDependencies": [
+            ["@swc/core-win32-x64-msvc", "npm:1.2.95"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["@tootallnate/once", [
@@ -1036,6 +1197,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["ansi-styles", "npm:3.2.1"],
             ["color-convert", "npm:1.9.3"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:4.3.0", {
+          "packageLocation": "./.yarn/cache/ansi-styles-npm-4.3.0-245c7d42c7-513b44c3b2.zip/node_modules/ansi-styles/",
+          "packageDependencies": [
+            ["ansi-styles", "npm:4.3.0"],
+            ["color-convert", "npm:2.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -1343,6 +1512,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["supports-color", "npm:5.5.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:4.1.2", {
+          "packageLocation": "./.yarn/cache/chalk-npm-4.1.2-ba8b67ab80-fe75c9d5c7.zip/node_modules/chalk/",
+          "packageDependencies": [
+            ["chalk", "npm:4.1.2"],
+            ["ansi-styles", "npm:4.3.0"],
+            ["supports-color", "npm:7.2.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["chokidar", [
@@ -1406,6 +1584,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["color-name", "npm:1.1.3"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:2.0.1", {
+          "packageLocation": "./.yarn/cache/color-convert-npm-2.0.1-79730e935b-79e6bdb9fd.zip/node_modules/color-convert/",
+          "packageDependencies": [
+            ["color-convert", "npm:2.0.1"],
+            ["color-name", "npm:1.1.4"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["color-name", [
@@ -1413,6 +1599,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/color-name-npm-1.1.3-728b7b5d39-09c5d3e33d.zip/node_modules/color-name/",
           "packageDependencies": [
             ["color-name", "npm:1.1.3"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:1.1.4", {
+          "packageLocation": "./.yarn/cache/color-name-npm-1.1.4-025792b0ea-b044585952.zip/node_modules/color-name/",
+          "packageDependencies": [
+            ["color-name", "npm:1.1.4"]
           ],
           "linkType": "HARD",
         }]
@@ -1833,6 +2026,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["esbuild", [
+        ["npm:0.12.29", {
+          "packageLocation": "./.yarn/unplugged/esbuild-npm-0.12.29-607de1d3c9/node_modules/esbuild/",
+          "packageDependencies": [
+            ["esbuild", "npm:0.12.29"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:0.13.4", {
           "packageLocation": "./.yarn/unplugged/esbuild-npm-0.13.4-9e72f39860/node_modules/esbuild/",
           "packageDependencies": [
@@ -2347,6 +2547,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/has-flag-npm-3.0.0-16ac11fe05-4a15638b45.zip/node_modules/has-flag/",
           "packageDependencies": [
             ["has-flag", "npm:3.0.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:4.0.0", {
+          "packageLocation": "./.yarn/cache/has-flag-npm-4.0.0-32af9f0536-261a135703.zip/node_modules/has-flag/",
+          "packageDependencies": [
+            ["has-flag", "npm:4.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -4071,6 +4278,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["has-flag", "npm:3.0.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:7.2.0", {
+          "packageLocation": "./.yarn/cache/supports-color-npm-7.2.0-606bfcf7da-3dda818de0.zip/node_modules/supports-color/",
+          "packageDependencies": [
+            ["supports-color", "npm:7.2.0"],
+            ["has-flag", "npm:4.0.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["symbol-observable", [
@@ -4374,6 +4589,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "less",
             "sass",
             "stylus"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["vite-plugin-node", [
+        ["npm:0.0.14", {
+          "packageLocation": "./.yarn/cache/vite-plugin-node-npm-0.0.14-b3a55b68f7-63a4f41762.zip/node_modules/vite-plugin-node/",
+          "packageDependencies": [
+            ["vite-plugin-node", "npm:0.0.14"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:c57ccfc06c3aea768e06251e308f2606ff435ff61d9457971c76ad6458c1eb9af55bcfdcb2c28dfd295432f9b1ad28de159fe54975ce65470a9a39f71eb671e8#npm:0.0.14", {
+          "packageLocation": "./.yarn/__virtual__/vite-plugin-node-virtual-42433f140c/0/cache/vite-plugin-node-npm-0.0.14-b3a55b68f7-63a4f41762.zip/node_modules/vite-plugin-node/",
+          "packageDependencies": [
+            ["vite-plugin-node", "virtual:c57ccfc06c3aea768e06251e308f2606ff435ff61d9457971c76ad6458c1eb9af55bcfdcb2c28dfd295432f9b1ad28de159fe54975ce65470a9a39f71eb671e8#npm:0.0.14"],
+            ["@rollup/pluginutils", "npm:4.1.1"],
+            ["@swc/core", "npm:1.2.95"],
+            ["@types/vite", null],
+            ["chalk", "npm:4.1.2"],
+            ["debug", "virtual:428f325a939c2653ad822eb3d75efb02ac311523dd0d4f9645afc39ea00bd86eceac35a9d59c9b6977d76b670a4ef0ae057ea572338a44729aa592711a8c05a3#npm:4.3.2"],
+            ["vite", "virtual:4d7d12b0aa0d3ade46e91ab633f16bffc56652399a432a485b9822b71ccdb7d4edee31b1ecc5a3d5d721ecbb952c71d8eefb71066b394c924f7043e31dcc147d#npm:2.6.7"]
+          ],
+          "packagePeers": [
+            "@types/vite",
+            "vite"
           ],
           "linkType": "HARD",
         }]

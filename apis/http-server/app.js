@@ -80,6 +80,25 @@ if(process.env.NODE_ENV === 'staging' || process.env.NODE_ENV === 'production') 
         }
       })
   );
+
+  require('vite').createServer({
+    root: process.cwd(),
+    logLevel: 'debug',
+    server: {
+      middlewareMode: true,
+      watch: {
+        // During tests we edit the files too fast and sometimes chokidar
+        // misses change events, so enforce polling for consistency
+        usePolling: true,
+        interval: 100
+      }
+    }
+  })
+    .then((vite) => {
+      console.log(vite);
+      // use vite's connect instance as middleware
+      app.use(vite.middlewares)
+    })
 }
 
 app.use(express.json());
