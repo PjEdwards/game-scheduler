@@ -28,8 +28,10 @@
     "@parcel/config-default": "next",
     "@parcel/packager-raw-url": "next",
     "@parcel/transformer-webmanifest": "next",
+    "@vitejs/plugin-react": "^1.0.0",
     "http-server": "^13.0.2",
-    "parcel": "next"
+    "typescript": "^4.3.2",
+    "vite": "^2.6.4"
   },
   "workspaces": [
     "packages/*",
