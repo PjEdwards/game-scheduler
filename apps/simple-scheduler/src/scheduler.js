@@ -1,4 +1,5 @@
-const { difference, sample } = require('lodash');
+import { difference, sample } from 'lodash';
+
 
 // Every coach has to play at every game
 // Every coach has to play every other coach at least once

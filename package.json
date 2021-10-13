@@ -4,12 +4,10 @@
   "author": "Paul Edwards",
   "homepage": "https://pjedwards.github.io/game-scheduler/",
   "scripts": {
-    "test": "node scripts/example.js",
-    "start-scheduler": "parcel apps/scheduler/public/index.html --open",
-    "start-simple-scheduler": "parcel apps/simple-scheduler/public/index.html --open",
-    "build-scheduler": "parcel build apps/scheduler/public/index.html --dist-dir apps/scheduler/dist",
-    "build-simple-scheduler": "parcel build apps/simple-scheduler/public/index.html --dist-dir apps/simple-scheduler/dist",
-    "deploy": "rm -rf docs && mv build docs"
+    "start-scheduler": "yarn workspace @soccer/scheduler vite",
+    "start-simple-scheduler": "yarn workspace @soccer/simple-scheduler vite",
+    "build-scheduler": "yarn workspace @soccer/scheduler vite build",
+    "build-simple-scheduler": "yarn workspace @soccer/simple-scheduler vite build"
   },
   "browserslist": {
     "production": [
@@ -25,9 +23,6 @@
     ]
   },
   "devDependencies": {
-    "@parcel/config-default": "next",
-    "@parcel/packager-raw-url": "next",
-    "@parcel/transformer-webmanifest": "next",
     "@vitejs/plugin-react": "^1.0.0",
     "http-server": "^13.0.2",
     "typescript": "^4.3.2",
@@ -35,6 +30,7 @@
   },
   "workspaces": [
     "packages/*",
-    "apps/*"
+    "apps/*",
+    "apis/*"
   ]
 }

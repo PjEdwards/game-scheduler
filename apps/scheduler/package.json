@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "author": "Paul Edwards",
   "homepage": "https://pjedwards.github.io/game-scheduler/",
-  "source": "public/index.html",
+  "source": "index.html",
+  "main": "dist/indext.html",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
